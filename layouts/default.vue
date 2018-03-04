@@ -1,8 +1,7 @@
 <template>
   <div>
-
     <nuxt/>
-    <Monitoreos />
+  
   </div>
 </template>
 

@@ -1,17 +1,62 @@
 <template id="">
+  <div class="" >
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+      </ol>
+    </nav>
+    <hr>
+    <ul class="list-group componente">
+      <nuxt-link to="/paciente/medicamentos/"
+      class="list-group-item d-flex justify-content-between align-items-center">
+       <div class="d-flex w-100 justify-content-between">
+        Medicamentos
+        <span class="badge badge-primary badge-pill">2</span>
+       </div>
+     </nuxt-link>
+    </ul>
+    <ul class="list-group componente">
+      <nuxt-link to="/paciente/monitoreo/"
+      class="list-group-item d-flex justify-content-between align-items-center">
+       <div class="d-flex w-100 justify-content-between">
+        Monitoreo
+        <span class="badge badge-primary badge-pill">3</span>
+       </div>
+     </nuxt-link>
+    </ul>
 
-  <div >
-      <h1>pacientes index</h1>
-    <input type="text" v-model="userId" >
-    <button  @click="onLoadUser"> ver paciente</button>
   </div>
 </template>
 
+<style scope>
+
+.list-group.componente {
+  margin-top:20px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:20px;
+}
+
+a.list-group-item {
+  color:#000;
+  font-size:1.2rem;
+
+}
+
+a.list-group-item:hover {
+  color:inherit;
+  background-color:#f9f9f9;
+
+
+}
+
+</style>
+
+
 
 <script >
-
-
   export default {
+
     data(){
       return {
         userId:''
@@ -22,43 +67,13 @@
         this.$router.push('/paciente/medicamentos/')
       }
     },
+    layout:'pacientes',
     mounted(){
-    	this.$OneSignal.sendSelfNotification(/* Title (defaults if unset) */
-    	  "OneSignal Web Push Notification",
-    	  /* Message (defaults if unset) */
-    	  "Action buttons increase the ways your users can interact with your notification.", 
-    	   /* URL (defaults if unset) */
-    	  'https://example.com/?_osp=do_not_open',
-    	  /* Icon */
-    	  'https://onesignal.com/images/notification_logo.png',
-    	  {
-    	    /* Additional data hash */
-    	    notificationType: 'news-feature'
-    	  }, 
-    	  [{ /* Buttons */
-    	    /* Choose any unique identifier for your button. The ID of the clicked button is passed to you so you can identify which button is clicked */
-    	    id: 'like-button',
-    	    /* The text the button should display. Supports emojis. */
-    	    text: 'Like',
-    	    /* A valid publicly reachable URL to an icon. Keep this small because it's downloaded on each notification display. */
-    	    icon: 'http://i.imgur.com/N8SN8ZS.png',
-    	    /* The URL to open when this action button is clicked. See the sections below for special URLs that prevent opening any window. */
-    	    url: 'https://example.com/?_osp=do_not_open'
-    	  },
-    	  {
-    	    id: 'read-more-button',
-    	    text: 'Read more',
-    	    icon: 'http://i.imgur.com/MIxJp1L.png',
-    	    url: 'https://example.com/?_osp=do_not_open'
-    	  }]);
+      localStorage.monitoreo = [
+        {"nombre":"juan"}
+      ];
+      console.log(localStorage);
+      
     }
   }
 </script>
-
-<style scope>
-.list-group.componente {
-  margin-top:20px;
-  margin-left:5px;
-  margin-right:5px;
-}
-</style>
