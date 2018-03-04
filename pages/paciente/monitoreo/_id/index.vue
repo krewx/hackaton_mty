@@ -8,18 +8,37 @@
         </ol>
       </nav>
       <hr>
-      <div class="">
-        <button type="button" @click="callParam" name="button">a ver?</button>
+      <div class="" v-if="monitoreo.status == 1">
+          <MonitoreoHistorial />
 
-
+      </div>
+      <div class="" v-if="monitoreo.status == 2">
+        status 2
+      </div>
+      <div class="" v-if="monitoreo.status == 3">
+        status 3
       </div>
     </div>
 </template>
 <script type="text/javascript">
+import  MonitoreoHistorial from '~/components/Monitoreo/MonitoreoHistorial.vue'
+
 export default {
+  components:{
+    MonitoreoHistorial
+  },
   data(){
     return {
-      userId:''
+     monitoreo:{}
+    }
+  },
+  mounted:function(){
+    var itms = JSON.parse(localStorage.monitoreo);
+    //console.log(this.$route.params,itms);
+    for(var i = 0; i< itms.length;i++){
+      if(itms[i].nombre == this.$route.params.id)
+        this.monitoreo = itms[i];
+      //  console.log(this.monitoreo);
     }
   },
   methods:{
@@ -29,7 +48,6 @@ export default {
     }
   },
   layout:'pacientes',
-  props:['datos']
 
 }
 </script>

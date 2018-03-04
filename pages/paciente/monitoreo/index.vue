@@ -8,27 +8,18 @@
       </nav>
       <hr>
       <ul class="list-group">
-          <MonitoreoPreview id="1"
-          nombre="Glucosa"
-          proxima=" 3 horas"
-          ultima=" 3 horas "
-          status="1" />
-          <MonitoreoPreview id="1"
-          nombre="Frecuencia Cardiaca"
-          proxima="Ahora"
-          ultima=" 3 horas "
-          status="2" />
-          <MonitoreoPreview id="1"
-          nombre="Saturacion de oxigeno"
-          proxima=" hace 5 minutos"
-          ultima=" 3 horas "
-          status="3" />
+          <MonitoreoPreview v-for="item of lista"
+          :key="item.id"
+          :id="item.id"
+          :nombre="item.nombre"
+          :proxima="item.proxima"
+          :ultima="item.ultima"
+          :status="item.status" />
       </ul>
-
-
-
     </div>
 </template>
+
+
 
 <script type="text/javascript">
 import  MonitoreoPreview from '~/components/Monitoreo/MonitoreoPreview.vue'
@@ -36,5 +27,14 @@ import  MonitoreoPreview from '~/components/Monitoreo/MonitoreoPreview.vue'
     components:{
     MonitoreoPreview
     },
+    data:function(){
+      return {
+        lista:[]
+      }
+
+    },
+    mounted:function(){
+      this.lista = JSON.parse(localStorage.monitoreo);
+    }
   }
 </script>

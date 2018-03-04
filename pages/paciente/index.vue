@@ -69,11 +69,13 @@ a.list-group-item:hover {
     },
     layout:'pacientes',
     mounted(){
-      localStorage.monitoreo = [
-        {"nombre":"juan"}
-      ];
+      localStorage.monitoreo = JSON.stringify([
+        {"id":"1","nombre":"Glucosa","proxima":" 3 horas ", "ultima":" 3 horas","status":"1"},
+        {"id":"2","nombre":"Frecuencia Cardiaca","proxima":" Ahora ", "ultima":" 3 horas","status":"2"},
+        {"id":"3","nombre":"Saturacion de oxigeno","proxima":" hace 5 minutos ", "ultima":" 3 horas","status":"3"}
+      ]);
       console.log(localStorage);
-      
+
     }
   }
 </script>
