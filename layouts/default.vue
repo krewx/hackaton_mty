@@ -1,8 +1,18 @@
 <template>
   <div>
+    <NavPaciente />
     <nuxt/>
   </div>
 </template>
+
+<script type="text/javascript">
+  import  NavPaciente from '~/components/NavPaciente.vue'
+  export default {
+    components:{
+      NavPaciente
+    }
+  }
+</script>
 
 <style>
 html
