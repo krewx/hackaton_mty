@@ -33,7 +33,7 @@
     		info: [],
     		labels: []
     	}
-    }
+    },
     layout:'pacientes',
     mounted: function(){
     	let lista = JSON.parse(localStorage.medicamentos);
