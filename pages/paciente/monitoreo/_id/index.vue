@@ -19,16 +19,20 @@
       <div class="" v-if="monitoreo.status == 3">
         status 3
       </div>
+      <LineChartComponent>
+      </LineChartComponent>
     </div>
 </template>
 <script type="text/javascript">
 import  MonitoreoHistorial from '~/components/Monitoreo/MonitoreoHistorial.vue'
 import  MonitoreoCaptura from '~/components/Monitoreo/MonitoreoCaptura.vue'
+import  LineChartComponent from '~/components/LineChartComponent.vue'
 
 export default {
   components:{
     MonitoreoHistorial,
-    MonitoreoCaptura
+    MonitoreoCaptura,
+    LineChartComponent
   },
   data(){
     return {
