@@ -51,7 +51,8 @@
   export default {
     data:function(){
       return {
-        tomas:[{'id':1,'numero':'1','hora':'7:12 am','valor':'130 md/dl', 'optimo':'80 - 130 md/dl'}]
+        tomas:[{'id':1,'numero':'1','hora':'7:12 am','valor':'130 md/dl', 'optimo':'80 - 130 md/dl'},
+        {'id':2,'numero':'2','hora':'7:30 pm','valor':'110 md/dl', 'optimo':'80 - 130 md/dl'}]
       }
     }
   }

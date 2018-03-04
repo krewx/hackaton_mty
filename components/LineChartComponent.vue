@@ -32,7 +32,15 @@ export default {
   	            "lineTension":0.1
   	        }]
   	    },
-  	    options: {}
+  	    options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true
+                  }
+              }]
+        }
+      }
   	});
   }
 }

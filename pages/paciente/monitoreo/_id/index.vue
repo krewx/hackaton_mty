@@ -9,13 +9,22 @@
       </nav>
       <hr>
       <h4 class="text-center">Historico de {{$route.params.id}}</h4>
-      <div class="" >
+      <div v-if="monitoreo.status == 1" >
           <MonitoreoHistorial />
-
+    		  <LineChartComponent
+    		  	:data="info"
+    		  	:labels="labels"  >
+    		  </LineChartComponent>
       </div>
-
-      <LineChartComponent>
-      </LineChartComponent>
+      <div class="" v-if="monitoreo.status == 2">
+        <form class="" >
+          <div class="form-group">
+            <label for="exampleInputEmail1">Latidos por minuto</label>
+            <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Latidos por minuto">
+          </div>
+          <button class="btn btn-primary" type="button" name="button" @click="agregarLatidos">Guardar</button>
+        </form>
+      </div>
     </div>
 </template>
 <script type="text/javascript">
@@ -31,22 +40,26 @@ export default {
   },
   data(){
     return {
-     monitoreo:{}
+     nuevo:0,
+     itms :[],
+     monitoreo:{},
+     info:[130,90,135],
+     labels: ['7:12 am','02:30 pm','08:00 pm']
     }
   },
   mounted:function(){
-    var itms = JSON.parse(localStorage.monitoreo);
+    this.itms = JSON.parse(localStorage.monitoreo);
     //console.log(this.$route.params,itms);
-    for(var i = 0; i< itms.length;i++){
-      if(itms[i].nombre == this.$route.params.id)
-        this.monitoreo = itms[i];
-      //  console.log(this.monitoreo);
+    for(var i = 0; i< this.itms.length;i++){
+      if(this.itms[i].nombre == this.$route.params.id)
+        this.monitoreo = this.itms[i];
     }
+    console.log(this.monitoreo);
   },
   methods:{
-    callParam(){
-      console.log(this.$parent)
-      console.log(this.$props)
+    agregarLatidos(){
+
+
     }
   },
   layout:'pacientes',
