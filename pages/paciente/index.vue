@@ -76,9 +76,9 @@ a.list-group-item:hover {
       ]);
 
       localStorage.medicamentos = JSON.stringify([
-        {"id":"1","nombre":"Insulina ","proxima":" 3 horas ", "frecuencia":" cada 6 horas","status":" Correcta ", "cumplimiento":"88 %"},
+        {"id":"1","nombre":"Insulina","proxima":" 3 horas ", "frecuencia":" cada 6 horas","status":" Correcta ", "cumplimiento":"88 %"},
         {"id":"2","nombre":"Paracetamol","proxima":" Ahora ", "frecuencia":" cada 8 horas","status":" Pendiente ","cumplimiento":"84 %"},
-        {"id":"3","nombre":"Heparina ","proxima":" 4 horas ", "frecuencia":" cada 5 horas","status":" Pendiente ", "cumplimiento":"86 %"}
+        {"id":"3","nombre":"Heparina","proxima":" 4 horas ", "frecuencia":" cada 5 horas","status":" Pendiente ", "cumplimiento":"86 %"}
 
       ]);
 

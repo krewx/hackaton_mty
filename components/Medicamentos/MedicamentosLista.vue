@@ -48,12 +48,10 @@ import  MedicamentosLista from '~/components/Medicamentos/MedicamentosLista.vue'
       return {
         lista:[]
       }
-
     },
     methods:{
       verMed:function(data){
-        this.$route.path().push('/'+data.nombre+'/')
-        
+        this.$router.push('/paciente/medicamentos/'+data.id+'/')
       }
     },
     mounted:function(){
