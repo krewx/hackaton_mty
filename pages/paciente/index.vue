@@ -5,7 +5,14 @@
         <li class="breadcrumb-item active" aria-current="page">Inicio</li>
       </ol>
     </nav>
-    <hr>
+
+    <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading"> Bienvenido Fabian! </h4>
+      <p>
+        Recuerda que tu siguiente cita con la Dra. Emilia Jimenez es en 3 dias.
+      </p>
+    </div>
+
     <ul class="list-group componente">
       <nuxt-link to="/paciente/medicamentos/"
       class="list-group-item d-flex justify-content-between align-items-center">

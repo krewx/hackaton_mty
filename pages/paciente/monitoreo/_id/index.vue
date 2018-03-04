@@ -9,16 +9,11 @@
       </nav>
       <hr>
       <h4 class="text-center">Historico de {{$route.params.id}}</h4>
-      <div class="" v-if="monitoreo.status == 1">
+      <div class="" >
           <MonitoreoHistorial />
 
       </div>
-      <div class="" v-if="monitoreo.status == 2">
-          <MonitoreoCaptura />
-      </div>
-      <div class="" v-if="monitoreo.status == 3">
-        status 3
-      </div>
+
       <LineChartComponent>
       </LineChartComponent>
     </div>
