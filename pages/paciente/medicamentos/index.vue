@@ -1,5 +1,5 @@
 <template id="">
-  <div class="container">
+  <div >
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item" > <nuxt-link to="/paciente/"> Inicio </nuxt-link> </li>
@@ -8,7 +8,7 @@
     </nav>
     <h2 class="text-center"> Tratamiento actual </h2>
     <MedicamentosLista />
-	<BarChartComponent>
+  	<BarChartComponent>
     </BarChartComponent>
   </div>
 </template>

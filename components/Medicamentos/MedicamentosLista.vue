@@ -1,5 +1,5 @@
 <template id="">
-    <div class="">
+
       <div class="MedList">
         <table class="table">
           <thead>
@@ -36,7 +36,7 @@
            </tbody>
         </table>
       </div>
-    </div>
+    
 </template>
 <script type="text/javascript">
 import  MedicamentosLista from '~/components/Medicamentos/MedicamentosLista.vue'

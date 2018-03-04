@@ -76,12 +76,11 @@ a.list-group-item:hover {
       ]);
 
       localStorage.medicamentos = JSON.stringify([
-        {"id":"1","nombre":"Insulina","proxima":" 3 horas ", "frecuencia":" cada 6 horas","status":" Correcta ", "cumplimiento":"88 %"},
-        {"id":"2","nombre":"Paracetamol","proxima":" Ahora ", "frecuencia":" cada 8 horas","status":" Pendiente ","cumplimiento":"84 %"},
-        {"id":"3","nombre":"Heparina","proxima":" 4 horas ", "frecuencia":" cada 5 horas","status":" Pendiente ", "cumplimiento":"86 %"}
-
+        {'instrucciones':['Consumir despues de cada alimento','No ingerir bebidas alcoholicas 30 minutos antes'],"riesgos":['Consumir en caso de glucosa superior a 135 md/dl '],"id":"1","nombre":"Insulina","proxima":" 3 horas ", "frecuencia":" cada 6 horas","status":" Correcta ", "cumplimiento":"88 %"},
+        {'instrucciones':['Evitar bebidas con alcohol'],"riesgos":['Ninguno'], "id":"2","nombre":"Paracetamol","proxima":" Ahora ", "frecuencia":" cada 8 horas","status":" Pendiente ","cumplimiento":"84 %"},
+        {'instrucciones':['No superar dosis indicada'],"riesgos":['Suspender en caso de molestias en la piel'],"id":"3","nombre":"Heparina","proxima":" 4 horas ", "frecuencia":" cada 5 horas","status":" Pendiente ", "cumplimiento":"86 %"}
       ]);
-	  
+
 	  OneSignal.push(["init", {
 	  		appId: 'f03d1541-af29-452c-a644-375574401d95',
 	  		safari_web_id: 'web.onesignal.auto.44737891-769a-4856-a052-0f3c9471900',
@@ -96,7 +95,7 @@ a.list-group-item:hover {
 	          /* Title (defaults if unset) */
 	          "OneSignal Web Push Notification",
 	          /* Message (defaults if unset) */
-	          "Action buttons increase the ways your users can interact with your notification.", 
+	          "Action buttons increase the ways your users can interact with your notification.",
 	           /* URL (defaults if unset) */
 	          'https://example.com/?_osp=do_not_open',
 	          /* Icon */
@@ -104,7 +103,7 @@ a.list-group-item:hover {
 	          {
 	            /* Additional data hash */
 	            notificationType: 'news-feature'
-	          }, 
+	          },
 	          [{ /* Buttons */
 	            /* Choose any unique identifier for your button. The ID of the clicked button is passed to you so you can identify which button is clicked */
 	            id: 'like-button',
@@ -122,7 +121,7 @@ a.list-group-item:hover {
 	            url: 'https://example.com/?_osp=do_not_open'
 	          }]
 	        );
-	      
+
 	  });
 
     }

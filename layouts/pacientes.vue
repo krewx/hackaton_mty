@@ -1,6 +1,6 @@
 <template id="">
   <div class="container">
-      <h1 class="text-center">  </h1>
+    
       <hr>
       <nuxt />
   </div>
