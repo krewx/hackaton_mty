@@ -8,8 +8,8 @@
     </nav>
     <h2 class="text-center"> Tratamiento actual </h2>
     <MedicamentosLista />
-
-    
+	<BarChartComponent>
+    </BarChartComponent>
   </div>
 </template>
 
@@ -18,9 +18,11 @@
 
 <script type="text/javascript">
   import  MedicamentosLista from '~/components/Medicamentos/MedicamentosLista.vue'
+  import  BarChartComponent from '~/components/BarChartComponent.vue'
   export default {
     components:{
-      MedicamentosLista
+      MedicamentosLista,
+      BarChartComponent
     },
     layout:'pacientes'
   }
