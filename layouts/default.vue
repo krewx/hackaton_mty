@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavPaciente />
+
     <nuxt/>
     <Monitoreos />
   </div>
@@ -8,11 +8,11 @@
 
 <script type="text/javascript">
   import  NavPaciente from '~/components/NavPaciente.vue'
-  import  Monitoreos from '~/components/Monitoreos.vue'
+  import  MonitoreoPreview from '~/components/Monitoreo/MonitoreoPreview.vue'
   export default {
     components:{
       NavPaciente,
-      Monitoreos
+      MonitoreoPreview
     }
   }
 </script>

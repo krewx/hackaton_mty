@@ -7,7 +7,10 @@
   </div>
 </template>
 
+
 <script >
+
+
   export default {
     data(){
       return {
@@ -21,3 +24,11 @@
     }
   }
 </script>
+
+<style scope>
+.list-group.componente {
+  margin-top:20px;
+  margin-left:5px;
+  margin-right:5px;
+}
+</style>
