@@ -1,6 +1,6 @@
 <template id="">
   <div class="MedList">
-    <h4 class="text-center">Historico de {{$route.params.id}}</h4>
+    
     <table class="table">
       <thead>
         <tr>

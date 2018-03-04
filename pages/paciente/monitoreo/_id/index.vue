@@ -8,12 +8,13 @@
         </ol>
       </nav>
       <hr>
+      <h4 class="text-center">Historico de {{$route.params.id}}</h4>
       <div class="" v-if="monitoreo.status == 1">
           <MonitoreoHistorial />
 
       </div>
       <div class="" v-if="monitoreo.status == 2">
-        status 2
+          <MonitoreoCaptura />
       </div>
       <div class="" v-if="monitoreo.status == 3">
         status 3
@@ -22,10 +23,12 @@
 </template>
 <script type="text/javascript">
 import  MonitoreoHistorial from '~/components/Monitoreo/MonitoreoHistorial.vue'
+import  MonitoreoCaptura from '~/components/Monitoreo/MonitoreoCaptura.vue'
 
 export default {
   components:{
-    MonitoreoHistorial
+    MonitoreoHistorial,
+    MonitoreoCaptura
   },
   data(){
     return {

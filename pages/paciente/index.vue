@@ -11,7 +11,7 @@
       class="list-group-item d-flex justify-content-between align-items-center">
        <div class="d-flex w-100 justify-content-between">
         Medicamentos
-        <span class="badge badge-primary badge-pill">2</span>
+        <span class="badge badge-primary badge-pill">3</span>
        </div>
      </nuxt-link>
     </ul>
@@ -20,7 +20,7 @@
       class="list-group-item d-flex justify-content-between align-items-center">
        <div class="d-flex w-100 justify-content-between">
         Monitoreo
-        <span class="badge badge-primary badge-pill">3</span>
+        <span class="badge badge-primary badge-pill">2</span>
        </div>
      </nuxt-link>
     </ul>
@@ -72,9 +72,16 @@ a.list-group-item:hover {
       localStorage.monitoreo = JSON.stringify([
         {"id":"1","nombre":"Glucosa","proxima":" 3 horas ", "ultima":" 3 horas","status":"1"},
         {"id":"2","nombre":"Frecuencia Cardiaca","proxima":" Ahora ", "ultima":" 3 horas","status":"2"},
-        {"id":"3","nombre":"Saturacion de oxigeno","proxima":" hace 5 minutos ", "ultima":" 3 horas","status":"3"}
+
       ]);
-      console.log(localStorage);
+
+      localStorage.medicamentos = JSON.stringify([
+        {"id":"1","nombre":"Insulina ","proxima":" 3 horas ", "frecuencia":" cada 6 horas","status":" Correcta ", "cumplimiento":"88 %"},
+        {"id":"2","nombre":"Paracetamol","proxima":" Ahora ", "frecuencia":" cada 8 horas","status":" Pendiente ","cumplimiento":"84 %"},
+        {"id":"3","nombre":"Heparina ","proxima":" 4 horas ", "frecuencia":" cada 5 horas","status":" Pendiente ", "cumplimiento":"86 %"}
+
+      ]);
+
 
     }
   }
