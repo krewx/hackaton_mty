@@ -2,14 +2,17 @@
   <div>
     <NavPaciente />
     <nuxt/>
+    <Monitoreos />
   </div>
 </template>
 
 <script type="text/javascript">
   import  NavPaciente from '~/components/NavPaciente.vue'
+  import  Monitoreos from '~/components/Monitoreos.vue'
   export default {
     components:{
-      NavPaciente
+      NavPaciente,
+      Monitoreos
     }
   }
 </script>
