@@ -40,9 +40,24 @@ module.exports = {
   */
   modules: [,
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/onesignal',
+    '@nuxtjs/pwa',
   ],
-
+  
+  /*
+  	OneSignal options
+  */
+  oneSignal: {
+  	init: {
+  		appId: 'f03d1541-af29-452c-a644-375574401d95',
+  		safari_web_id: 'web.onesignal.auto.44737891-769a-4856-a052-0f3c9471900',
+	    allowLocalhostAsSecureOrigin: true,
+	    welcomeNotification: {
+	        disable: false
+	    }
+  	}
+  },
   /*
   ** Build configuration
   */
