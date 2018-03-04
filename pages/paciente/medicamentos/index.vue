@@ -8,7 +8,11 @@
     </nav>
     <h2 class="text-center"> Tratamiento actual </h2>
     <MedicamentosLista />
-  	<BarChartComponent>
+  	<BarChartComponent
+  		:data="info"
+  		:labels="labels"
+  		label="% de cumplimiento"
+  	>
     </BarChartComponent>
   </div>
 </template>
@@ -24,6 +28,21 @@
       MedicamentosLista,
       BarChartComponent
     },
-    layout:'pacientes'
+    data: function(){
+    	return {
+    		info: [],
+    		labels: []
+    	}
+    }
+    layout:'pacientes',
+    mounted: function(){
+    	let lista = JSON.parse(localStorage.medicamentos);
+    	var i, aux;
+    	for (i=0; i<lista.length; i++){
+    		aux = lista[i].cumplimiento.replace(" %","");
+    		this.info.push(parseInt(aux));
+    		this.labels.push(lista[i].nombre);
+    	}
+    }
   }
 </script>

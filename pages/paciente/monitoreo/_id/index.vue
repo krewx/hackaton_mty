@@ -11,16 +11,18 @@
       <h4 class="text-center">Historico de {{$route.params.id}}</h4>
       <div class="" v-if="monitoreo.status == 1">
           <MonitoreoHistorial />
-
+		  <LineChartComponent
+		  	:data="info"
+		  	:labels="labels"
+		  >
+		  </LineChartComponent>
       </div>
       <div class="" v-if="monitoreo.status == 2">
           <MonitoreoCaptura />
       </div>
       <div class="" v-if="monitoreo.status == 3">
-        status 3
+        status 3 
       </div>
-      <LineChartComponent>
-      </LineChartComponent>
     </div>
 </template>
 <script type="text/javascript">
@@ -36,7 +38,9 @@ export default {
   },
   data(){
     return {
-     monitoreo:{}
+     monitoreo:{},
+     info:[130,110],
+     labels: ['7:12 am','7:30 pm']
     }
   },
   mounted:function(){
@@ -45,8 +49,8 @@ export default {
     for(var i = 0; i< itms.length;i++){
       if(itms[i].nombre == this.$route.params.id)
         this.monitoreo = itms[i];
-      //  console.log(this.monitoreo);
     }
+    console.log(this.monitoreo);
   },
   methods:{
     callParam(){
